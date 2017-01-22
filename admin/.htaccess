@@ -1,0 +1,4 @@
+AuthName "Cette page est securisée"
+AuthType Basic
+AuthUserFile "C:\xampp\htdocs\www\absent\admin\.htpasswd"
+Require valid-user
