@@ -45,19 +45,13 @@ if(isset($_POST['name']) AND !empty($_POST['name'])
 
 
 $prof =$bdd->query('SELECT * FROM BDD');
-
+$bdd -> exec("DROP ")
  ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>admin</title>
-    <style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      }
-    </style>
     <style type="text/css">
     	/*###### Bouton gauche des mois ######*/
     	.MonthLeft{
@@ -1113,6 +1107,9 @@ $prof =$bdd->query('SELECT * FROM BDD');
     		}
     	}
     	</script>
+      <script src="https://use.fontawesome.com/48bab7b394.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="hover.css">
   </head>
   <body>
     <table>
@@ -1125,8 +1122,50 @@ $prof =$bdd->query('SELECT * FROM BDD');
             <td><input type="text" name="new2Date" value="<?= $p['2date']?>" onclick="new calendar(this);"/></td>
             <td><input type="text" name="new1Hour" value="<?= $p['1hour']?>"/></td>
             <td><input type="text" name="new2Hour" value="<?= $p['2hour']?>"/></td>
-              <td><a href="index.php?delete=<?= $p['id'] ?>">Suprimmer</a></td>
-              <td><input type="submit" value="modifier"/></td>
+              <td><a href="index.php?delete=<?= $p['id'] ?>" class="hvr-shutter-in-horizontal" style="display: inline-block;
+              -webkit-box-sizing: content-box;
+              -moz-box-sizing: content-box;
+              box-sizing: content-box;
+              cursor: pointer;
+              padding: 10px 20px;
+              border: 1px solid #7F1067;
+              -webkit-border-radius: 3px;
+              border-radius: 3px;
+              color:back;
+              text-decoration:none;
+              font: normal 16px/normal "Times New Roman", Times, serif;
+              color: rgba(255,255,255,0.9);
+              -o-text-overflow: clip;
+              text-overflow: clip;
+              background: #7F1067;
+              -webkit-box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+              box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+              text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+              -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);">Supprimer</a></td>
+              <td><button type="submit" class="hvr-shutter-in-horizontal" style="display: inline-block;
+              -webkit-box-sizing: content-box;
+              -moz-box-sizing: content-box;
+              box-sizing: content-box;
+              cursor: pointer;
+              padding: 10px 20px;
+              border: 1px solid #7F1067;
+              -webkit-border-radius: 3px;
+              border-radius: 3px;
+              font: normal 16px/normal "Times New Roman", Times, serif;
+              color: rgba(255,255,255,0.9);
+              -o-text-overflow: clip;
+              text-overflow: clip;
+              background: #7F1067;
+              -webkit-box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+              box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+              text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+              -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+              transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);">Modifier</button></td>
             </tr>
         </form>
       <?php }?>
@@ -1137,7 +1176,27 @@ $prof =$bdd->query('SELECT * FROM BDD');
           <td><input type="text" name="date2" placeholder="date2"/ onclick="new calendar(this);"></td>
           <td><input type="text" name="hour1" placeholder="hour1"/></td>
           <td><input type="text" name="hour2" placeholder="hour2"/></td>
-          <td><input type="submit" value="Ajouter"/></td>
+          <td><button type="submit" value="Ajouter" class="hvr-shutter-in-horizontal" style="display: inline-block;
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          cursor: pointer;
+          padding: 10px 20px;
+          border: 1px solid #7F1067;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          font: normal 16px/normal "Times New Roman", Times, serif;
+          color: rgba(255,255,255,0.9);
+          -o-text-overflow: clip;
+          text-overflow: clip;
+          background: #7F1067;
+          -webkit-box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+          box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2) ;
+          text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+          -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+          -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+          -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+          transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);">Ajouter</button></td>
         </from>
       </tr>
   </body>
